@@ -30,4 +30,4 @@ site:
   template: book-theme
   options:
     favicon: https://fairease.eu//themes/fairease/favicon.ico
-    logo: ../logo.png
+    logo: ../embedded-ressources/logo/logo.png
