@@ -1,5 +1,5 @@
 ---
-title: Funds
+title: Contacts
 authors:
   - D. Dobler
   - V. Racapé
