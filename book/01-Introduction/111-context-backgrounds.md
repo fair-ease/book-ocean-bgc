@@ -10,12 +10,16 @@ The Ocean BGC pilot aims at implementing and reaching a Technical Readiness Leve
 * **[Chlorophyll-*a* concentration](https://biogeochemical-argo.org/measured-variables-chlorophyll-a.php)** (Chlorophyll-*a* hereafter), the universal proxy for the phytoplankton biomass (*in prorgess*)
 
 
-```{image}  https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/S111-F1_BGC-QCV-webPlatform_workflow_user-actions.png
+<!-- ```{image}  https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/S111-F1_BGC-QCV-webPlatform_workflow_user-actions.png
 :alt: userWorkflow
 :width: 500px
 :align: center
+``` -->
+```{image} https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/sign-2408065_1280.png
+:alt: travaux
+:width: 200px
+:align: center
 ```
-
 The service will primarily be used on BGC variables measured by the Argo array, but also tested for measurements from the Glider array. Argo international array is composed of autonomous float profilers deployed in the global ocean, measuring from 2000m depth to the surface, every 10-days, during 5 years on average. It has been providing a synoptic view of the ocean state and health since the early 2000s, with an optimal coverage of temperature and salinity and an increasing coverage for BGC variables with the BGC mission. This implies an increased data management and associated Q.C.V volume and pace. The depth coverage has also been increasing with the DEEP mission, covering deeper waters down to 6000m depth. It concerns a subset of Argo floats, specifically manufactured to support greater pressure constraints, and measure precision requirements. Euro-Argo ERIC coordinates the European contribution to the Argo program. The Gliders are oceanic in-situ piloted platforms, so far dedicated to shallower areas and deployed at regional scale  for a shorter period of time.
 
 <!-- ```{image}  
