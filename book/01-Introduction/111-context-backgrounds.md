@@ -1,19 +1,22 @@
 ---
 title: Context & Backgrounds
-date : 2025-07-22
+date : 2025-08
 ---
 
 *Here below is adapted from the text written in the frame of the OSCARS proposal regarding the technical section. The proposal aims at developing the sequel of the Q.C.V service (proposal to continue the pilot development with the Chlorophyll-a workflow and the integration of an embedded web service into testbed) and reaching an overall TRL8.*
 
 The Ocean BGC pilot aims at implementing and reaching a Technical Readiness Level (TRL) of 7 at least for a web service that seamlessly orchestrates and parameterizes the unitary tools needed for the Qualification, Calibration and Validation (Q.C.V) of oceanic BioGeoChemical (BGC) variables. It focuses on the Q.C.V workflow of BGC playing a key role in the carbon cycle:  
-* **Nitrate**, a key phytoplankton nutrient : [https://biogeochemical-argo.org/measured-variables-nitrate.php](https://biogeochemical-argo.org/measured-variables-nitrate.php)
-* **Chlorophyll-*a* concentration** (Chlorophyll-*a* hereafter), the universal proxy for the phytoplankton biomass (*in prorgess*): [https://biogeochemical-argo.org/measured-variables-chlorophyll-a.php](https://biogeochemical-argo.org/measured-variables-chlorophyll-a.php)
+* **[Nitrate](https://biogeochemical-argo.org/measured-variables-nitrate.php)**, a key phytoplankton nutrient
+* **[Chlorophyll-*a* concentration](https://biogeochemical-argo.org/measured-variables-chlorophyll-a.php)** (Chlorophyll-*a* hereafter), the universal proxy for the phytoplankton biomass (*in prorgess*)
+
 
 ```{image}  https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/S111-F1_BGC-QCV-webPlatform_workflow_user-actions.png
 :alt: userWorkflow
 :width: 500px
 :align: center
 ```
+
+The service will primarily be used on BGC variables measured by the Argo array, but also tested for measurements from the Glider array. Argo international array is composed of autonomous float profilers deployed in the global ocean, measuring from 2000m depth to the surface, every 10-days, during 5 years on average. It has been providing a synoptic view of the ocean state and health since the early 2000s, with an optimal coverage of temperature and salinity and an increasing coverage for BGC variables with the BGC mission. This implies an increased data management and associated Q.C.V volume and pace. The depth coverage has also been increasing with the DEEP mission, covering deeper waters down to 6000m depth. It concerns a subset of Argo floats, specifically manufactured to support greater pressure constraints, and measure precision requirements. Euro-Argo ERIC coordinates the European contribution to the Argo program. The Gliders are oceanic in-situ piloted platforms, so far dedicated to shallower areas and deployed at regional scale  for a shorter period of time.
 
 <!-- ```{image}  
 :alt: argo_network
@@ -34,6 +37,7 @@ The most known phenomenon affecting sensors is the drift in time, for which cali
 Q.C.V operators (also called delayed mode operators) are facing many challenges. They must use and chain several tools, specific to the phenomena influencing the variable and to the reference data availability. Several coding languages coexist (R, python, Matlab, etc.), depending on the preference of the tool developer. Added to this complexity are the platform used (HPC, own laptop, linux/windows, etc.), and ancillary data access performances. This is a major barrier for Q.C.V processing efficiency for two reasons: long and complex installation and uptake of the tools. This implies difficulty to on-board new human resources in a context of growing demand, which is particularly true for the Argo array dataset.
 Following Open Science and subsequent FAIR principles, the Ocean BGC pilot provides operators with a seamless orchestration of the necessary tools, to easily perform complete Q.C.V workflows and provide guidance for the tools parameterisation. This service will be integrated in two infrastructures, allowing engaging different kinds of users: 
 
-* the **[Galaxy](https://earth-system.usegalaxy.eu/login/start)** orchestrator for creation of individual workflows, which facilitates the integration of other in-situ arrays (cross-domain or cross-RI), 
+
+* the **[Galaxy](https://earth-system.usegalaxy.eu/)** orchestrator for creation of individual workflows, which facilitates the integration of other in-situ arrays (cross-domain or cross-RI), 
 * the **Testbed** cloud infrastructure for a multi-user application (*in progress*)
 
