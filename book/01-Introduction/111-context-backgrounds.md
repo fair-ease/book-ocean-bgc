@@ -1,37 +1,38 @@
 ---
 title: Context & Backgrounds
-date : 2025-08
+date : 2025-07-01
 ---
 
 *Here below is adapted from the text written in the frame of the OSCARS proposal regarding the technical section. The proposal aims at developing the sequel of the Q.C.V service (proposal to continue the pilot development with the Chlorophyll-a workflow and the integration of an embedded web service into testbed) and reaching an overall TRL8.*
+
 
 The Ocean BGC pilot aims at implementing and reaching a Technical Readiness Level (TRL) of 7 at least for a web service that seamlessly orchestrates and parameterizes the unitary tools needed for the Qualification, Calibration and Validation (Q.C.V) of oceanic BioGeoChemical (BGC) variables. It focuses on the Q.C.V workflow of BGC playing a key role in the carbon cycle:  
 * **[Nitrate](https://biogeochemical-argo.org/measured-variables-nitrate.php)**, a key phytoplankton nutrient
 * **[Chlorophyll-*a* concentration](https://biogeochemical-argo.org/measured-variables-chlorophyll-a.php)** (Chlorophyll-*a* hereafter), the universal proxy for the phytoplankton biomass (*in prorgess*)
 
 
-<!-- ```{image}  https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/S111-F1_BGC-QCV-webPlatform_workflow_user-actions.png
+```{figure}  ../../embedded-ressources/figures/S111-F1_BGC-QCV-webPlatform_workflow_user-actions.png
 :alt: userWorkflow
-:width: 500px
+:class: bg-primary mb-1
+:width: 900px
 :align: center
-``` -->
-```{image} https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/sign-2408065_1280.png
-:alt: travaux
-:width: 200px
-:align: center
+user QCV workflow, credit : @ POKaPOK
 ```
+
+
 The service will primarily be used on BGC variables measured by the Argo array, but also tested for measurements from the Glider array. Argo international array is composed of autonomous float profilers deployed in the global ocean, measuring from 2000m depth to the surface, every 10-days, during 5 years on average. It has been providing a synoptic view of the ocean state and health since the early 2000s, with an optimal coverage of temperature and salinity and an increasing coverage for BGC variables with the BGC mission. This implies an increased data management and associated Q.C.V volume and pace. The depth coverage has also been increasing with the DEEP mission, covering deeper waters down to 6000m depth. It concerns a subset of Argo floats, specifically manufactured to support greater pressure constraints, and measure precision requirements. Euro-Argo ERIC coordinates the European contribution to the Argo program. The Gliders are oceanic in-situ piloted platforms, so far dedicated to shallower areas and deployed at regional scale  for a shorter period of time.
 
 <!-- ```{image}  
 :alt: argo_network
 :width: 500px
 :align: center
-```
-```{image}  
-:alt: glider_network
-:width: 500px
-:align: center
 ``` -->
+```{figure}  ../../embedded-ressources/figures/frsen-04-1106533-g002.jpg
+:alt: glider_network
+:width: 900px
+:align: center
+Example of a glider’s trajectory as in Cauchy et al. (2023), Credits @https://doi.org/10.3389/frsen.2023.1106533
+```
 
 The specificity of Argo floats and sensors are two-folds: real-time transmission and remote calibration. The real-time transmission is performed through satellite communication, and data are distributed within 6 to 12 hours of the collection to all users, including a first round of real-time quality control checks (robust and conservative tests to detect gross outliers, such as spikes, which are mostly coming from transmission isolated issues). This quick transmission specifically benefits Argo operational users (climate and ocean forecasts and reanalyses). Regarding the remote calibration: as Argo floats are autonomous and stay for long periods of time at sea, they can not be recalibrated in lab conditions. Thus other remote techniques are employed and are fully described hereafter within the Q.C.V workflows.
 
