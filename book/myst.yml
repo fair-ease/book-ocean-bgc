@@ -30,7 +30,38 @@ project:
 #          institution: euro-argo
 #          ror: 05bz2z050 
 
-
+toc:
+  - file: index.md
+  - title: 01-Introduction
+    children:
+        - file: 111-context-backgrounds.md
+        - file: 112-scientific-impacts.md
+        - file: 113-link-to-references.md
+  - title: 02-FAIR-EASE  services for the Ocean BGC pilot
+    children:
+        - file: 121-introduction.md
+        - file: 122-udal.md
+        - file: 123-webodv.md
+        - file: 124-galaxy.md
+        - file: 125-testbed.md
+  - title: 03-easy BGC QCV workflows
+    children:
+        - file: 131-general-description.md
+        - file: 132-Nitrate.md
+        - file: 133-Chlorophylla.md
+  - title: 04-User manual
+  - title: 05-Pushing data back into Research Infrastructures data workflows
+    children:
+        - file: 151-argo.md
+        - file: 152-glider.md 
+  - title: 06-example-gallery
+    children:
+        - file: 161-Galaxy-tutorials.md
+        - file: 162-links.md
+  - title: 07-Acknowledgements
+    children:
+        - file: 171-Funds.md
+        - file: 172-Contact.md
 site:
   template: book-theme
   options:
