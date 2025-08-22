@@ -1,6 +1,7 @@
 ---
 title: Galaxy
 date : 2025-08
+label: galaxyUserManual
 ---
 
 # How to run the easy QCV from Galaxy workflows

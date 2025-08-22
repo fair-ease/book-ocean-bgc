@@ -3,7 +3,7 @@ title: Unified Data Access Layer (UDAL)
 date: 2025-08-20
 ---
 
-As recommended by the FAIR-EASE technical team for the data access layer, the easy Q.C.V BGC has used the proposed UDAL service. The core of the UDAL implementation has been developed and proposed by M.Portier and G.Mendes. Specific implementations for new data sources and the integration layer with the easy Q.C.V BGC have been developed by the POKaPOK team. 
+As recommended by the FAIR-EASE technical team for the data access layer, the easy Q.C.V BGC has used the proposed UDAL service. The core of the UDAL implementation has been developed and proposed by Marc Portier[<img src="../../embedded-ressources/logo/ORCID-iD_icon_16x16.png" alt="orcidl" width="50px">](https://orcid.org/0000-0002-9648-6484) and Jorge Mendes. Specific implementations for new data sources and the integration layer with the easy Q.C.V BGC have been developed by the POKaPOK team. 
 UDAL aims to simplify data access to data consumers by abstracting the way of querying datasets. It is similar to a catalog of data with its own language. This language and its associated simplified and harmonized query language is common to all datasets. This allows the users to discover and get data without knowing the specificities of the accesses to the various datasets. The data access and querying schemes have to be written by each data provider, which knows the access specificity of its own dataset. Also, UDAL is able to manage cache, data storage and avoid duplication of data. 
 
 ```{figure}  ../../embedded-ressources/figures/S122_udalWF.png
@@ -33,7 +33,7 @@ For the easy Q.C.V BGC, UDAL is now able to get data access to Argo floats, Glid
 Stemming from the easy Q.C.V BGC needs, credential management was also added, as it was necessary to fetch data on copernicus marine datastore. This part is not fully functional but it works as a proof of concept to address UDAL in future developments including Copernicus data. 
 
 ### UDAL Queries
-Each data source has its own vocabulary and query detailed in the next section for Argo, Glider, World Ocean Atlas (WOA) and Copernicus Marine Service.
+Each data source has its own vocabulary and query detailed in the next sections for Argo, Glider, World Ocean Atlas (WOA) and Copernicus Marine Service.
 
 In the easy Q.C.V BGC, only URNs ending with ‘files’ (urn:pokapok:udal:XXX:files) have been used. The processing of files is performed by the easy Q.C.V BGC as it needs to keep original data.
  
@@ -69,8 +69,12 @@ The specific implementation of UDAL developed by the POKaPOK team for the needs 
 #### Example of usage
 To run the UDAL, [clone the POKaPOK git](https://gitlab.com/pokapok-projects/easy-qcv-bgc/libraries/py-udal-pokapok) and follow the instructions of installation on the readme. Below, there is an example of usage with python (only language available for now) to download and store Gliders files.
 
-```
-# Glider files
+```{code-block} python
+---
+lineno-start: 1
+caption: |
+    Glider files example
+---
 from pokapok.udal import UDAL, Config
 from pokapok.glider.types import *
 
