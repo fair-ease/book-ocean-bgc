@@ -36,7 +36,7 @@ project:
           - file: 113-link-to-references.md
     - title: 02-FAIR-EASE  services for the Ocean BGC pilot
       children:
-          - file: 121-introduction.md
+          - file: 121-overview.md
           - file: 122-udal.md
           - file: 123-webodv.md
           - file: 124-galaxy.md
