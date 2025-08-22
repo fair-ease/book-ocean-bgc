@@ -1,5 +1,5 @@
 ---
-title: Unified Data Access Layer - UDAL
+title: Unified Data Access Layer (UDAL)
 date: 2025-08-20
 ---
 
@@ -40,36 +40,54 @@ In the easy Q.C.V BGC, only URNs ending with ‘files’ (urn:pokapok:udal:XXX:f
 The specific implementation of UDAL developed by the POKaPOK team for the needs of the easy Q.C.V BGC can be found  on the [POKaPOK docker hub account](https://gitlab.com/pokapok-projects/easy-qcv-bgc/libraries/py-udal-pokapok)
 
 
-#### argo queries
-```
-'urn:pokapok:udal:argo:meta' - return argo meta parameters file
-Args : ['float_type']
-'urn:pokapok:udal:argo:data' - return argo float dataset (xarray); all cycles concatenated
-Args : ['dac', 'float_mode', 'float_type', 'float', 'descending_cycles']
-'urn:pokapok:udal:argo:files' - return argo files (data and meta)
-Args : ['dac', 'float_mode', 'float_type', 'float', 'descending_cycles', 'incl_meta', 'bypass_out_arch_building']
-```
+#### Argo queries
+1. 'urn:pokapok:udal:argo:meta' - `return argo meta parameters file`
+    - Args : ['float_type']
+2. 'urn:pokapok:udal:argo:data' - `return argo float dataset (xarray)`; all cycles concatenated
+    - Args : ['dac', 'float_mode', 'float_type', 'float', 'descending_cycles']
+3. 'urn:pokapok:udal:argo:files' - `return argo files` (data and meta)
+    - Args : ['dac', 'float_mode', 'float_type', 'float', 'descending_cycles', 'incl_meta', 'bypass_out_arch_building']
 
 
-#### glider queries
-``` 
-'urn:pokapok:udal:glider:files - return glider files 
-Args : ['name', 'deployment_date', 'descending_cycles', 'bypass_out_arch_building']
-```
+#### Glider queries
+1. 'urn:pokapok:udal:glider:files - `return glider files` 
+    - Args : ['name', 'deployment_date', 'descending_cycles', 'bypass_out_arch_building']
 
 
-#### woa queries
-```
-'urn:pokapok:udal:woa23 - return WOA 2023 dataset (xarray) 
-Args : ['decade', 'grid', 'time_res', 'variable']
-'urn:pokapok:udal:woa23:files - return WOA 2023 files 
-Args : ['decade', 'grid', 'time_res', 'variable', 'lon_min', 'lon_max', 'lat_min', 'lat_max']
-```
+#### WOA queries
+1. 'urn:pokapok:udal:woa23 - `return WOA 2023 dataset (xarray)` 
+    - Args : ['decade', 'grid', 'time_res', 'variable']
+2. 'urn:pokapok:udal:woa23:files - `return WOA 2023 files` 
+    - Args : ['decade', 'grid', 'time_res', 'variable', 'lon_min', 'lon_max', 'lat_min', 'lat_max']
 
 
-#### copernicus marine service queries
+#### Copernicus Marine Service queries
 (still under development)
+1. 'urn:pokapok:udal:copernicus:files - `return Copernicus files` 
+    - Args : ['dataset_id', 'variables', 'minimum_longitude', 'maximum_longitude', 'minimum_latitude', 'maximum_latitude',  'start_datetime', 'end_datetime', 'minimum_depth', 'maximum_depth', 'output_filename', 'overwrite', 'netcdf_compression_level', 'bypass_out_arch_building', 'lon_min', 'lon_max', 'lat_min', 'lat_max']
+
+#### Example of usage
+To run the UDAL, [clone the POKaPOK git](https://gitlab.com/pokapok-projects/easy-qcv-bgc/libraries/py-udal-pokapok) and follow the instructions of installation on the readme. Below, there is an example of usage with python (only language available for now) to download and store Gliders files.
+
 ```
-'urn:pokapok:udal:copernicus:files - return Copernicus files 
-Args : ['dataset_id', 'variables', 'minimum_longitude', 'maximum_longitude', 'minimum_latitude', 'maximum_latitude',  'start_datetime', 'end_datetime', 'minimum_depth', 'maximum_depth', 'output_filename', 'overwrite', 'netcdf_compression_level', 'bypass_out_arch_building', 'lon_min', 'lon_max', 'lat_min', 'lat_max']
+# Glider files
+from pokapok.udal import UDAL, Config
+from pokapok.glider.types import *
+
+
+query_args = {
+   'name': 'sea019',
+   'deployment_date': '20180724',
+   'descending_cycles': True,
+   'url': 'https://co.ifremer.fr/co/ego/ego/v2/',
+   'bypass_out_arch_building': True
+   }
+
+
+config = Config(cache_dir='.')
+glider = UDAL(query_args["url"], config=config)
+
+
+result = glider.execute('urn:pokapok:udal:glider:files', query_args)
+result.data()
 ```
