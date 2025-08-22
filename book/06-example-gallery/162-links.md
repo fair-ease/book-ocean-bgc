@@ -1,8 +1,7 @@
 ---
-title: Funds
-authors:
-  - D. Dobler
-  - V. Racapé
+title: Rapid links to main features
+date: 2025-08-20
+label: links
 ---
 
 

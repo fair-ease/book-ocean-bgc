@@ -2,8 +2,8 @@
 version: 1
 project:
   id: uc521-ocean-bgc
-  title: Ocean BGC
-  description: Blabla to be completed
+  title: Easy Q.C.V BGC
+  description: this book provide the user manual of the easy qcv bgc workflow
   github: https://github.com/fair-ease/book-ocean-bgc
 #  jupyter:
 #    lite: true
@@ -16,18 +16,23 @@ project:
     code:
       id: LGPL-3.0-only
 #  authors:
-#    - id: ebodere
-#      name: Erwan Bodéré
-#      orcid: 0000-0002-0507-4274
+#    - id: vracape
+#      name: Virginie Racape
+#      orcid: 0000-0003-0239-5125
 #      affiliations:
-#        - id: ifremer
-#          institution: Ifremer
-#          ror: 044jxhp58
-#          department: Research Infrastructure and Information Systems
+#        - id: pokapok
+#          institution: pokapok
+#    - id: ddobler
+#      name: Delphine Dobler
+#      orcid: 0000-0002-8947-2922
+#      affiliations:
+#        - id: euro-argo
+#          institution: euro-argo
+#          ror: 05bz2z050 
 
 
 site:
   template: book-theme
   options:
     favicon: https://fairease.eu//themes/fairease/favicon.ico
-    logo: ../logo.png
+    logo: ../embedded-ressources/logo/logo.png
