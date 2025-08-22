@@ -45,6 +45,6 @@ Following Open Science and subsequent FAIR[^myref] principles, the Ocean BGC pil
 [^myref]:Findable, Accessible, Interoperable and Reusable (https://www.go-fair.org/fair-principles/) 
 
 
-* the **[Galaxy](https://earth-system.usegalaxy.eu/)** orchestrator for creation of individual workflows, which facilitates the integration of other in-situ arrays (cross-domain or cross-RI), 
-* the **Testbed** cloud infrastructure for a multi-user application (*in progress*)
+* the [Galaxy](https://earth-system.usegalaxy.eu/) orchestrator for creation of individual workflows, which facilitates the integration of other in-situ arrays (cross-domain or cross-RI), 
+* the [Testbed](#testbed) cloud infrastructure for a multi-user application (*in progress*)
 
