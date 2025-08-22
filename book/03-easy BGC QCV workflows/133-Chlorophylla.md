@@ -1,11 +1,9 @@
 ---
 title: Chlorophyll-a
-authors:
-  - D. Dobler
-  - V. Racapé
+date: 2025-08-20
 ---
 
-# Specific calibration step
+The Chlorophyll-a calibration methodology follows the Argo reference documentation [BGC-Argo quality control manual for chlorophyll-a concentration and chl-fluorescence](https://doi.org/10.13155/35385).
 
 ```{image}  https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/sign-2408065_1280.png
 :alt: travaux
