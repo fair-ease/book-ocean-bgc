@@ -1,6 +1,7 @@
 ---
 title: Unified Data Access Layer (UDAL)
 date: 2025-08-20
+label: udal
 ---
 
 As recommended by the FAIR-EASE technical team for the data access layer, the easy Q.C.V BGC has used the proposed UDAL service. The core of the UDAL implementation has been developed and proposed by Marc Portier[<img src="../../embedded-ressources/logo/ORCID-iD_icon_16x16.png" alt="orcidl" width="50px">](https://orcid.org/0000-0002-9648-6484) and Jorge Mendes. Specific implementations for new data sources and the integration layer with the easy Q.C.V BGC have been developed by the POKaPOK team. 
