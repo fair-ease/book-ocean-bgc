@@ -15,18 +15,6 @@ project:
       id: CC-BY-4.0
     code:
       id: LGPL-3.0-only
-  plugins:
-    - directives.mjs
-    - picsum.mjs
-    - latex.mjs
-    - versions.mjs
-    - templates.mjs
-    - type: executable
-      path: picsum.py
-    - type: executable
-      path: markup.py
-    - type: javascript
-      path: markup.mjs
   toc:
     - file: index.md
     - title: Introduction
@@ -47,6 +35,10 @@ project:
           - file: 03-easy BGC QCV workflows/132-Nitrate.md
           - file: 03-easy BGC QCV workflows/133-Chlorophylla.md
     - title: User manual
+      children:
+          - file: 04-User manual/141-ongalaxy.md
+            children:
+                - file: 04-User manual/141a-prerequisites.md
     - title: Pushing data back into Research Infrastructures data workflows
       children:
           - file: 05-Pushing data back into Research Infrastructures data workflows/151-argo.md
