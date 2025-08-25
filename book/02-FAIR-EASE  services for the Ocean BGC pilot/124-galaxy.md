@@ -11,5 +11,5 @@ An `easy Q.C.V BGC Nitrate workflow` has been set-up and is accessible on Galaxy
 Working hand in hand with the Galaxy team enabled us to implement a versatile tool for inputs, outputs, and parameterization.
 
 :::{seealso} See Also!
-All of these are fully described in the [Galaxy User manual](#galaxyUserManual) and and listing in the [Example gallery](#links). 
+All of these are fully described in the [Galaxy User manual](#galaxyUserManual1) and and listing in the [Example gallery](#links). 
 :::
