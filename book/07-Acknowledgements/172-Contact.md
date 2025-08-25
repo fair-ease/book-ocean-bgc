@@ -1,6 +1,7 @@
 ---
 title: Contacts
 date: 2025-08-20
+label : contact
 ---
 
 * **General comment** are to be sent to contact@euro-argo.eu : start the mail object with [easy QCV BGC] 

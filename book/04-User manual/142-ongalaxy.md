@@ -4,7 +4,7 @@ date : 2025-08-20
 label: galaxyUserManual1
 ---
 
-The next section explains how to qualify and calibrate the nitrate sensor mounted on the argo float 4903881 tool by tool or running a pre-design galaxy workflow. This tutorial is accompanied by screenshots to guide you. If you have any difficulties, or suggestions for improvement, please contact us (link to the contact page). For your information, execution time for running tools depends on the number of files, their size and/or the number of people working on Galaxy.
+The next sections explain how to qualify and calibrate the nitrate sensor mounted on the argo float 4903881 tool by tool or running a pre-design galaxy workflow. For your information, execution time for running tools depends on the number of files, their size and/or the number of people working on Galaxy.
 
 :::{warning}
 DO NOT change file names to ensure that any changes you make with ODV will be carried over. However, it is possible to change the name of <span style="color:green">galaxy collections</span> to make them easier to find.
@@ -15,11 +15,6 @@ DO NOT change file names to ensure that any changes you make with ODV will be ca
 :::{admonition} Galaxy account
 :class: dropdown
 Create or Login to your [Galaxy europe account](https://earth-system.usegalaxy.eu/login/start)
-:::
-
-:::{admonition} Nitrate calibration
-:class: dropdown
-Because oxygen concentration is implied in the estimation of the nitrate adjustment from neural network method, platforms to be calibrated need to have **`oxygen with a good quality`** that means adjusted in real time or delayed mode for Argo float or glider.
 :::
 
 :::{admonition} Galaxy tips and tricks
@@ -65,4 +60,24 @@ It is possible to organise your history with *sub-directory* :
 :width: 500px
 :align: center
 ```
+:::
+
+### Manage your data
+
+:::{admonition} Get data from the S3 server
+:class: dropdown
+For uploading the argo data files (meta, core and BGC) of the float 4903881 from the S3 service: 
+- (a) Click on “Upload” on the “Galaxy action list” vertical panel on the left. A pop-up is launched
+- (b) Click on “Choose from repository” at the bottom of the popup
+
+:::
+
+:::{admonition} Get data from your computer
+:class: dropdown
+
+:::
+
+:::{admonition} Organize your data
+:class: dropdown
+
 :::
