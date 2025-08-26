@@ -330,16 +330,7 @@ Parametrisation of ODV interactive tool on Galaxy
 ##### Open ODV interactive tool
 When the ODV interactive tool is ready,
 - a red dot with the number “1” appears on the **Interactive tool** button in the vertical panel on the left of the **<span style="color:gold">Galaxy action list</span>**. Click it (see `a` on @figure-13). A new vertical panel appears in the center. 
-- Launch the ODV interactive tool by clicking the “expended” symbol (see `b` on @figure-13). This can take a few minutes. Don’t hesitate to refresh the page. ODV opens in a new window automatically with the selected view (lien vers une explication de la vue)
-
-:::{note} FYI 1
-3 potential ODV output appears in the history section in orange. These become green when ODV will be close properly (at the end of your actions) (see  @figure-12 and #odvoutput)
-:::
-
-:::{note} FYI 2
-After a few minutes of inactivity, the ODV window may turn off. Don't panic, just refresh the web page.
-:::
-
+- Launch the ODV interactive tool by clicking the “expended” symbol (see `b` on @figure-13). This can take a few minutes. Don’t hesitate to refresh the page. ODV opens in a new window automatically with the selected view (@figure-14)
 
 ```{figure}  ../../embedded-ressources/figures/S142-ODVlaunch2.png
 :label: figure-13
@@ -348,8 +339,54 @@ After a few minutes of inactivity, the ODV window may turn off. Don't panic, jus
 How to launch ODV interactive tool on Galaxy
 
 ```
+:::{note}
+3 potential ODV output appears in the history section in orange. These become green when ODV will be close properly (at the end of your actions) (see  @figure-12 and @odvoutput)
+:::
+
+:::{note}
+After a few minutes of inactivity, the ODV window may turn off. Don't panic, just refresh the web page.
+:::
+
+
+```{figure}  ../../embedded-ressources/figures/S142-nitrateView.png
+:label: figure-14
+:width: 900px
+:align: center
+Default view when performing called ***qualification_startingPoint_nitrate.xview*** creating by `ODV collection manager` 
+
+```
 
 #### Step3 : Qualify the dataset with ODV 
 Many useful information are available in the [Supplementation section for ODV](#my-chapterODV)
+
+#### Step4 : Export history once qualification is finished.
+:::{warning}
+Be sure that all filters ([how to do?](#filterout))or zoom windows are relaxed ([How to do?](#outzoom)).
+:::
+
+To export history information, 
+- Click on the top left **Export** > **History**
+- The *Export station history* opens, with a default name ***history_from_odv_collection.txt*** with our example; 
+- Go to *working/Documents/ODV/galaxy/outputs*
+:::{important}
+DO NOT CHANGE THE DEFAULT NAME OF THE HISTORY FILE
+:::
+- **Save** > **OK** > **OK**
+- close ODV by clicking on top left **File** > **exit**
+
+Once the ODV interactive tool closed, the 3 potential odv outputs are now available (green color) in the history section (figure above). Only 2 are useful for the next steps.
+
+##### ODV Tool outputs
+::: {admonition} ODV interactive tool outputs
+:label:odvoutput
+***ODV all outputs*** (galaxy collection)
+- ***data_odv_collection.zip*** (all odv output files in a zip)
+- ***history_from_odv_collection.txt***
+- ***odv_collection.odv***
+- ***odv_collection.txt*** (creating with odv collection manager)
+
+***ODV history extracted*** with the history txt files (same as history_from_odv_collection.txt).
+:::
+
 ### Calibrate your data
 ### Validate your data

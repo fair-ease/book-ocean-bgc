@@ -32,14 +32,32 @@ Your collection is now open.
 - Again right click on the middle of the plot. Select **properties**. In the **General** sheet, select **Palette = Ferret_blue_orange**. In the *Data* sheet, select **Z-Axis/Colorbar settings**, and indicate minimum = 49 (ODV QC for Argo QC1) and maximum =  52 (ODV QC for Argo QC4).
 :::
 
+:::{admonition} How to select a specific platform 
+- Click on **View** in the top bar
+- Select **Station Filter**
+- Select **Customize**, the "Station filter" pop-up window opens
+- Make your selection by **Cruise Label**
+- Click **ok**
+:::
+
+:::{admonition} How to relax station filter
+:label:filterout
+- Click on **View** in the top bar
+- Select **Station Filter**
+- Select **Relax**, the "Station filter" pop-up window opens
+:::
+
 :::{admonition} How to zoom inside a figure
 - Right click on the figure, select **Zoom**. A red rectangle appears on the figure. 
 - Adapt the shape as desired by left-clicking on the corner or middle of a segment and moving the mouse. 
 - Once ok, left-double click in the figure.
 
 N.B.: Sometimes, while selecting the Zoom menu several times in a row, the Zoom menu can appear as “unselectable” in grey color. Just be patient, wait a few seconds, and try again.
+:::
 
-N.B.2: to zoom out: either select **Full range** or **Auto-Zoom out**.
+:::{admonition} How to relaxe zoom
+:label:outzoom
+to zoom out: either select **Full range** or **Auto-Zoom out**.
 :::
 
 :::{admonition} How to change a QC for a point
@@ -65,7 +83,8 @@ Zoom for the visible window to encompass only the points for which you want to c
 :::
 ::::
 :::::
-#### Load view from ODV
+
+#### ODV view
 :::{admonition} (re)load view
 :label:loadview
 if the view has not properly launched, you can load it from the ODV menu. On the top bar:
@@ -76,7 +95,6 @@ if the view has not properly launched, you can load it from the ODV menu. On the
 The figure xx view should appear now.
 :::
 
-### xView creating by the ODV collection manager
 
 #### Supplemental analyses using Galaxy
 
