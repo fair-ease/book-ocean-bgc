@@ -16,7 +16,7 @@ This tool is currently operational for Argo float, World Ocean Atlas, and Glider
 ### Visualisation tools
 The visualisation tools include : 
 - *`ODV collection manager`* for creating Ocean Data View (ODV) spreadsheet collection from the QCV harmonized file(s). This tool also create an ODV view for Nitrate qualification 
-- *`ODV history manager`* for reporting QC changes in the QCV harmonized file(s)
+- *`ODV history manager`* for reporting QC & Data changes in the QCV harmonized file(s) performed with ODV software
 - [Embedded](#odv) `ODV` software for visualizing or qualifying the dataset
 
 ### Biogeochemical calibration tool
