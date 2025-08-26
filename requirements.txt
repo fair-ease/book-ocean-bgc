@@ -4,3 +4,5 @@ jupyter-book>=2.0.0a0
 ghp-import
 
 # project dependencies are under .binder/requirements.txt
+
+# Icon by <a href='https://iconpacks.net/?utm_source=link-attribution&utm_content=347'>Iconpacks</a>
