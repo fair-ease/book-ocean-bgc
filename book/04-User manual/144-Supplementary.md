@@ -21,7 +21,7 @@ To open new data set, click on the top left :
 Your collection is now open.
 :::
 
-#### Qualify your data with ODV
+#### Visualize & Qualify your data with ODV
 :::{admonition} How to create the bottom right figure from a virgin view !!!.
 - Right click in a void area on the ODV panel, select **layout** then **layout template**  then **1 SCATTER window**.
 - In the right panel, under the **Sample** section. Right click on any of the parameters and select **derived variables …**.
@@ -78,7 +78,7 @@ If the Z-value is defined as the derived parameter as described above, then you 
 Perform the same steps as for changing the QC for one observation point, but select **All samples of Current Station**
 :::
 
-:::{tab-item}	for all the points visible in the **zoomed** figure.
+:::{tab-item}	for all the points visible in the zoomed figure.
 Zoom for the visible window to encompass only the points for which you want to change the QC value. Perform the same steps as for changing the QC for one observation point, but select **All samples of Window x**. To know which window you must select, when your mouse is on the plot, read the bottom line with the coordinate values of the mouse pointer, the number of the current plot window is mentioned.
 :::
 ::::
@@ -96,7 +96,7 @@ The figure xx view should appear now.
 :::
 
 
-#### Supplemental analyses using Galaxy
+### Supplemental analyses using Galaxy
 
 ```{image}  https://github.com/fair-ease/book-ocean-bgc/blob/vracape/embedded-ressources/sign-2408065_1280.png
 :alt: travaux

@@ -70,6 +70,23 @@ Galaxy operation symbol
 ```
 :::
 
+:::{admonition} Galaxy execution constraints
+:class: dropdown
+- a quota per user account. Please [check it](https://galaxyproject.org/support/account-quotas/) and open the storage space used by your account by clicking in the history panel, on the database icon (see `a` in the @figure-quota). On the center panel, the storage manager page will open. It is noteworthy that when you delete a file in the history panel (right panel), it has not freed your storage space. To delete  permanently files, click on “Review and clear xx GB” (see `b` in the @figure-quota).
+
+```{figure}  ../../embedded-ressources/figures/S142-galaxy_storage_hadnling.jpg
+:label: figure-quota
+:width: 500px
+:align: center
+Galaxy quota information
+```
+- a time execution limitation for interactive tools (such as ODV). This limit is 24h. When the limit is reached, the tool automatically closes.
+- It is not advised to launch workflows over the week-end. The week-end is the moment when Galaxy upgrades are performed. These upgrades will for sure close open interactive tools and may have impact on other tools (depending on the upgrade content of course).
+- it is not possible to launch more than 2 interactives tools in the same time
+
+:::
+
+
 #### Nitrate Calibration
 :::{important}
 Because oxygen concentration is implied in the estimation of the `nitrate adjustment from neural network method`, platforms to be calibrated need to have `oxygen with a good quality` that means adjusted in real time or delayed mode for Argo float or glider.
@@ -85,11 +102,11 @@ The nitrate calibration needs a potential reference data set such as the nitrate
 ::::{tab-set}
 :::{tab-item} from the S3 server
 For uploading the argo data files (meta, core and BGC) of the float 4903881 from the S3 service: 
-- Click on **Upload** (see `a` on @figure-3) on the **<span style="color:gold">Galaxy action list</span>** vertical panel on the left. A pop-up window will open.
-- Click on **Choose from repository** (see `b` on @figure-3) at the bottom of the pop-up. A new pop-up window will open.
+- Click on **Upload** (see `a` in the @figure-3) on the **<span style="color:gold">Galaxy action list</span>** vertical panel on the left. A pop-up window will open.
+- Click on **Choose from repository** (see `b` in the @figure-3) at the bottom of the pop-up. A new pop-up window will open.
 - Search *argo* in the top search bar. *<span style="color:LightSkyBlue">Argo marine floats data and metadata from Global Data Assembly Centre (Argo GDAC)</span>* appears in the label column just below
 - Select it, then *<span style="color:LightSkyBlue">pub/dac/coriolis/4903881</span>* and tick *4903881_meta.nc* & *profiles/* 
-- Click on **Select** on the bottom right of the pop-up. The list of the files to download is displayed (see `c` on @figure-3)
+- Click on **Select** on the bottom right of the pop-up. The list of the files to download is displayed (see `c` in the @figure-3)
 - Remove the Synthetic files *SR4903881_*.nc* (not useful for qualification & calibration actions) by clicking on the corresponding trash icon on the right
 - Click on **Start** on the bottom of the pop-up. Once the download is completed (green color), close the window;
 
@@ -106,9 +123,9 @@ Get your data from S3 server
 :::{tab-item} from your computer
 <!-- :class: dropdown -->
 for uploading the argo data files (meta, core and BGC) of the float 4903881 or Word Ocean Atlas climatology from your computer: 
-- Click on **Upload** (see `a` on @figure-4) on the **<span style="color:gold">Galaxy action list</span>** vertical panel on the left. A pop-up window will open.
-- Click on **Choose local file** (see `b` on @figure-4) at the bottom of the popup. Your directory window will open.
-- Select file(s) to be added and Click on **Open** at the bottom of the popup. The list of the files to download is displayed (see `c` on @figure-4)
+- Click on **Upload** (see `a` in the @figure-4) on the **<span style="color:gold">Galaxy action list</span>** vertical panel on the left. A pop-up window will open.
+- Click on **Choose local file** (see `b` in the @figure-4) at the bottom of the popup. Your directory window will open.
+- Select file(s) to be added and Click on **Open** at the bottom of the popup. The list of the files to download is displayed (see `c` in the @figure-4)
 - Click on **Start** on the bottom of the pop-up. Once the download is complete (green color), close the window.
 
 Wait until all files are stored in your history on the right (green color).
@@ -132,13 +149,13 @@ Not useful for WOA
 Choose below the case corresponding to your **<span style="color:gold">history</span>** section before dowloading 4903881 files
 ::::{tab-set}
 :::{tab-item} From empty history
-- Click on {**Select item**}  (see `a` on @figure-5)
-- Click on **Select all** that has just appeared on the right  (see `b` on @figure-5)
+- Click on {**Select item**}  (see `a` in the @figure-5)
+- Click on **Select all** that has just appeared on the right  (see `b` in the @figure-5)
 - Click on  **All ## selected** that just replaced **Select all**. A window will pop up just below
 - Select **Auto build list**. A pop-up window will open in the central panel
-- Enter the name of the data collection : 4903881 (see `c` on @figure-6)
-- Turn off **Remove the file extension** (see `d` on @figure-6)
-- Click on **Build** on the bottom right of the pop-up (see `e` on @figure-6)
+- Enter the name of the data collection : 4903881 (see `c` in the @figure-6)
+- Turn off **Remove the file extension** (see `d` in the @figure-6)
+- Click on **Build** on the bottom right of the pop-up (see `e` in the @figure-6)
 
 Once the collection is ready, everything is green in the history panel. It is possible to limit the history to useful files or collections by clicking on the eyes above the files list in the history.
 
@@ -157,13 +174,13 @@ Once the collection is ready, everything is green in the history panel. It is po
 :::
 
 :::{tab-item} From NOT empty history
-- Click on {**Select item**}  (see `a` on @figure-7)
+- Click on {**Select item**}  (see `a` in the @figure-7)
 - Tick all interesting files
-- Click on  **## of ## selected**  (see `b` on @figure-7). A window will pop up just below
+- Click on  **## of ## selected**  (see `b` in the @figure-7). A window will pop up just below
 - Select **Auto build list**. A pop-up window will open in the central panel
-- Enter the name of the data collection : 4903881 (see `c` on @figure-8)
-- Turn off **Remove the file extension** (see `d` on @figure-8)
-- Click on **Build** on the bottom right of the pop-up (see `e` on @figure-8)
+- Enter the name of the data collection : 4903881 (see `c` in the @figure-8)
+- Turn off **Remove the file extension** (see `d` in the @figure-8)
+- Click on **Build** on the bottom right of the pop-up (see `e` in the @figure-8)
 
 Once the collection is ready, everything is green in the history panel. It is possible to limit the history to useful files or collections by clicking on the eyes above the files list in the history.
 
@@ -185,10 +202,10 @@ Once the collection is ready, everything is green in the history panel. It is po
 ##### File change extension
 Because galaxy does not manage h5 extension very well, please change it for WOA(if needed). In the history section, 
 - Select *woa###_.nc* file
-- Click on the **pencil** on the right. A new window opens in the central panel (see `a` on @figure-9)
-- Select **Datatype** (see `b` on @figure-9)
-- Inform the *New Type* with *NetCDF* (see `c` on @figure-9)
-- Save (see `d` on @figure-9)
+- Click on the **pencil** on the right. A new window opens in the central panel (see `a` in the @figure-9)
+- Select **Datatype** (see `b` in the @figure-9)
+- Inform the *New Type* with *NetCDF* (see `c` in the @figure-9)
+- Save (see `d` in the @figure-9)
 
   ```{figure}  ../../embedded-ressources/figures/S142-changeExtension.png
   :label: figure-9

@@ -29,7 +29,7 @@ It should be run as many time as there are dataset/platforms
 :::
 
 ### Visualisation tools
-The visualisation tools for the qualification, the validation and the extraction or the reporting of the user actions include `ODV` software, the *`ODV collection manager`* and *`ODV history manager`*.
+The visualisation tools for the qualification, the validation and the extraction or the reporting of the user actions include `ODV` software, the *`ODV collection manager`* and *`ODV history manager`*. Read details below.
 
 :::{admonition} Ocean Data View (ODV)
 `ODV` is a software for visualizing and/or qualifying scientific data. It can be used localy or directly on [Galaxy instance](#odv)
@@ -63,8 +63,30 @@ Its `outputs` are :
 
 ::::
 
-- *`ODV history manager`* for reporting QC & Data changes in the QCV harmonized file(s) performed with ODV software
+::::{admonition} ODV history manager details
+:label: odvhistmanager
+This tool extracts the QC changes (EDITFLAGS) and edit data (EDITDATA) from the ODV history file and reports them into the QCV harmonized file(s).
+The tool manages 2 types of ODV history file : 
+- *synthetic* from the manual export
+- *extended* from the automatic export (not available on galaxy for the moment)
+it is also able to map the QC flag scale used by [odv software](https://odv.awi.de/fileadmin/user_upload/odv/docs/ODV_quality_flag_sets.pdf) and asked during the ODV spreadsheet creation (see above) with the output harmonized file if the information is available 
 
+:::{admonition} Default parametrization
+:label: defaultHistory 
+:class: dropdown
+- *QC convention  for the ODV output file* = ARGO QC flag scale (reference table 2 in [argo data management manual](https://archimer.ifremer.fr/doc/00228/33951/32470.pdf))
+- *ODV convention regarding changes performed on the ODV collection* =
+    - EDITFLAGS (report QC changes from the history to the data collection) 
+    - EDITDATA (report data changes from the history to the data collection).
+:::
+
+Its `outputs` are :
+- `###_harm_qced.nc` : extended NetCDF files including changes (as many files as platform have been qualified)
+- `###_harm_history.csv` : csv files summarizing user changes (as many files as platform have been qualified)
+- `YYYY-MM-DDTHHMM_galaxy_odv-history-manager_history.log` : log file summaring status of the QC & data changes by platform
+- other technical log and state files
+ 
+::::
 
 ### Biogeochemical calibration tool
 Currently, the `Biogegeochemical calibration` tool is operational for **nitrate** and using [Method 1](#Nitrate1).
