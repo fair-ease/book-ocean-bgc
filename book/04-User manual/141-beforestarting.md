@@ -6,21 +6,68 @@ label: startingPoint
 
 This user manual is accompanied by screenshots to guide you in the **Q**ualification, **C**alibration, **V**alidation of your BGC dataset measured by Argo Float and by Glider for the moment. If you have any difficulties, or suggestions for improvement, [please contact us](#contact).
 
+The easy Q.C.V BGC toolkit is organized like this :
+
+:::{contents}
+:depth: 3
+:::
+
 ### Preprocessing of original files 
-The original files must be pre-processed in order to use the same tools regardless of their origin. This pre-processing is performed by the *`QCV harmonizer`* tool, which :
+The original files must be pre-processed in order to use the same tools regardless of their origin. This pre-processing is performed by the *`QCV harmonizer`* tool.
+
+:::{admonition} QCV harmonizer details
+:label: qcvharmonizer
+This tool : 
 - harmonizes vocabulary and format 
-- aggregates multiple files from the same platform.
+- aggregates multiple files from the same platform into one single file.
+
+Its `output` is : 
+- a single NetCDF file named `###_harm.nc` (since version 3.0 of the tool)
 
 This tool is currently operational for Argo float, World Ocean Atlas, and Gliders.
+It should be run as many time as there are dataset/platforms
+:::
 
 ### Visualisation tools
-The visualisation tools include : 
-- *`ODV collection manager`* for creating Ocean Data View (ODV) spreadsheet collection from the QCV harmonized file(s). This tool also create an ODV view for Nitrate qualification 
+The visualisation tools for the qualification, the validation and the extraction or the reporting of the user actions include `ODV` software, the *`ODV collection manager`* and *`ODV history manager`*.
+
+:::{admonition} Ocean Data View (ODV)
+`ODV` is a software for visualizing and/or qualifying scientific data. It can be used localy or directly on [Galaxy instance](#odv)
+:::
+
+::::{admonition} ODV collection manager details
+:label: odvcollmanager
+
+This tool creates :
+- Ocean Data View (ODV) spreadsheet collection from the QCV harmonized file(s) based on the [ODV user's guide version 5.7.0](https://odv.awi.de/fileadmin/user_upload/odv/docs/ODV_guide.pdf) by bringing together as many plastform or reference harmonized datasets are needed
+- ODV view for Nitrate qualification
+
+This tool is able : 
+- to map the input with expected output QC flag scale if the information is available in the harmonized file and in the [odv software](https://odv.awi.de/fileadmin/user_upload/odv/docs/ODV_quality_flag_sets.pdf)
+- to subset harmonized reference data set used for comparison. subsetting option : 1 (subset), 0 (no subset), -1 (inverse subset for float crossing 180°E/W)
+
+:::{admonition} ODV collection manager default parametrization
+:label: defaultODV 
+:class: dropdown
+- *operator name* = anonymmous
+- *QC convention  for the output file* = ARGO QC flag scale (reference table 2 in [argo data management manual](https://archimer.ifremer.fr/doc/00228/33951/32470.pdf))
+- *Subsetting* = 1 (yes it is, even there are no “input reference data”)
+- *plt* or plot = 0 (no plot showing the subsetting results) 
+:::
+
+Its `outputs` are : 
+- `odv_collection.txt`,  an ODV spreadsheet collection merging raw (argo or glider) and reference hamonized file
+- `qualification_startingPoint_nitrate.xview`, a ODV view made helping in the Nitrate qualification step
+- `YYYY-MM-DDTHHMM_galaxy_odv-coll-manager_QV.log`, a log file summarizing all actions performed by the tool with success or not
+- other technical /log and .state
+
+::::
+
 - *`ODV history manager`* for reporting QC & Data changes in the QCV harmonized file(s) performed with ODV software
-- [Embedded](#odv) `ODV` software for visualizing or qualifying the dataset
+
 
 ### Biogeochemical calibration tool
-Currently, the `Biogegeochemical calibration` tool is operational for **nitrate**.
+Currently, the `Biogegeochemical calibration` tool is operational for **nitrate** and using [Method 1](#Nitrate1).
 
 :::{important}
 Because oxygen concentration is implied in the estimation of the `nitrate adjustment from neural network method`, platforms to be calibrated need to have `oxygen with a good quality` that means adjusted in real time or delayed mode for Argo float or glider.
