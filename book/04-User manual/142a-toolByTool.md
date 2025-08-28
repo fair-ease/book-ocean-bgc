@@ -14,7 +14,7 @@ Before running the QCV procedure tool by tool, be sure that your environement ([
 :::
 ::::
 
-
+(my-chapter1)=
 ### Harmonize your data
 Run `QCV harmonizer` ([What is it?](#qcvharmonizer)) for creating the harmonized in format and vocabulary input data file(s) by following these instructions : 
 - Click on **Tools** just below **Upload** on the  **<span style="color:gold">Galaxy action list</span>** vertical panel on the left (see `a` in the @figure-10) . A new vertical panel called **Tools** appears next to the **<span style="color:gold">Galaxy action list</span>** vertical panel.
@@ -252,7 +252,7 @@ Run `Biogeochemical calibration` ([What is it?](#calibmeth)) for calibrating the
 - Select the tool. Its **<span style="color:gold">parametrization page</span>** appears on the center (@figure-calib)
 - In **Tool Parameters** section, select for each input (see `b` in the @figure-calib): 
     - *Input  harmonized netcdf data*: Select the 4903881 harmonized NetCDF file(s) with QC report, named ###_harm_qced.nc. The selection is easier by clicking on the 3 dots {*Browse or Upload datasets*}
-    - *Input reference data* : (optional) Select *woa_###_harm*.nc if you want to estimate the reference nitrate from climatology ([see for getting it](#harmonize-your-data))
+    - *Input reference data* : (optional) Select *woa_###_harm*.nc if you want to estimate the reference nitrate from climatology ([see for getting it](#my-chapter1))
 
 :::{note}
 It is possible to add several platform in the *Input harmonized netcdf data*
