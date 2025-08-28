@@ -1,6 +1,7 @@
 ---
 title: Galaxy
 date: 2025-08-20
+label: galaxypage
 ---
 
 [Galaxy Earth System Sciences](https://earth-system.usegalaxy.eu/) is an open source web platform born from [Galaxy Europe](https://galaxyproject.org/) for sharing and processing research data useful for the Fair-Ease project.
@@ -11,5 +12,5 @@ An `easy Q.C.V BGC Nitrate workflow` has been set-up and is accessible on Galaxy
 Working hand in hand with the Galaxy team enabled us to implement a versatile tool for inputs, outputs, and parameterization.
 
 :::{seealso} See Also!
-All of these are fully described in the [Galaxy User manual](#galaxyUserManual) and and listing in the [Example gallery](#links). 
+All of these are fully described in the [Galaxy User manual](#galaxyUserManual1) and and listing in the [Example gallery](#links). 
 :::

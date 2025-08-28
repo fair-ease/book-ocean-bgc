@@ -15,18 +15,6 @@ project:
       id: CC-BY-4.0
     code:
       id: LGPL-3.0-only
-  plugins:
-    - directives.mjs
-    - picsum.mjs
-    - latex.mjs
-    - versions.mjs
-    - templates.mjs
-    - type: executable
-      path: picsum.py
-    - type: executable
-      path: markup.py
-    - type: javascript
-      path: markup.mjs
   toc:
     - file: index.md
     - title: Introduction
@@ -41,12 +29,20 @@ project:
           - file: 02-FAIR-EASE  services for the Ocean BGC pilot/123-webodv.md
           - file: 02-FAIR-EASE  services for the Ocean BGC pilot/124-galaxy.md
           - file: 02-FAIR-EASE  services for the Ocean BGC pilot/125-testbed.md
-    - title: easy BGC QCV workflows
+    - title: Easy Q.C.V. BGC workflows
       children:
           - file: 03-easy BGC QCV workflows/131-general-description.md
           - file: 03-easy BGC QCV workflows/132-Nitrate.md
           - file: 03-easy BGC QCV workflows/133-Chlorophylla.md
     - title: User manual
+      children:
+          - file: 04-User manual/141-beforestarting.md
+          - file: 04-User manual/142-ongalaxy.md
+            children:
+                - file: 04-User manual/142a-toolByTool.md
+                - file: 04-User manual/142b-workflow.md
+          - file: 04-User manual/143-testbed.md
+          - file: 04-User manual/144-Supplementary.md
     - title: Pushing data back into Research Infrastructures data workflows
       children:
           - file: 05-Pushing data back into Research Infrastructures data workflows/151-argo.md

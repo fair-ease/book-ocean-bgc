@@ -1,6 +1,7 @@
 ---
 title: Ocean Data View (ODV)
 date: 2025-08-20
+label: odv
 ---
 
 [ODV](https://odv.awi.de/) is a software package for the `interactive exploration, analysis and visualization` of the oceanographic and other geo-referenced profile, time-series, trajectory or sequence data. 

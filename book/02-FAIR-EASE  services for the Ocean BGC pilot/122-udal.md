@@ -1,10 +1,10 @@
 ---
 title: Unified Data Access Layer (UDAL)
-date: 2025-08-20
+date: 2025-08-25
 label: udal
 ---
 
-As recommended by the FAIR-EASE technical team for the data access layer, the easy Q.C.V BGC has used the proposed UDAL service. The core of the UDAL implementation has been developed and proposed by Marc Portier {sup}`[![alt text](../../embedded-ressources/logo/orcid.png)](https://orcid.org/0000-0002-9648-6484)` and Jorge Mendes. Specific implementations for new data sources and the integration layer with the easy Q.C.V BGC have been developed by the POKaPOK team. 
+As recommended by the FAIR-EASE technical team for the data access layer, the easy Q.C.V BGC has used the proposed UDAL service. The core of the UDAL implementation has been developed and proposed by Marc Portier {sup}`[![alt text](../../embedded-ressources/logo/orcid.png)](https://orcid.org/0000-0002-9648-6484)` and Jorge Mendes {sup}`[![alt text](../../embedded-ressources/logo/orcid.png)](https://orcid.org/0000-0002-7977-9453)`. Specific implementations for new data sources and the integration layer with the easy Q.C.V BGC have been developed by the POKaPOK team. 
 UDAL aims to simplify data access to data consumers by abstracting the way of querying datasets. It is similar to a catalog of data with its own language. This language and its associated simplified and harmonized query language is common to all datasets. This allows the users to discover and get data without knowing the specificities of the accesses to the various datasets. The data access and querying schemes have to be written by each data provider, which knows the access specificity of its own dataset. Also, UDAL is able to manage cache, data storage and avoid duplication of data. 
 
 ```{figure}  ../../embedded-ressources/figures/S122_udalWF.png
