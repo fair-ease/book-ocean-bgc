@@ -1,6 +1,7 @@
 ---
 title: Nitrate
 date: 2025-08-20
+label: nitratepage
 ---
 
 The Nitrate calibration methodology follows the Argo reference documentation [BGC-Argo quality control manual for nitrate concentration](https://doi.org/10.13155/84370) and recommendation from Euro-Argo RISE project  [D4.5: Recommendations for enhancement of NO3 QC Methods](https://zenodo.org/records/7369098⁠).

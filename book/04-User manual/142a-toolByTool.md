@@ -245,5 +245,73 @@ ODV history manager parametrization
 ```
 
 ### Calibrate your data
+#### Nitrate
+Run `Biogeochemical calibration` ([What is it?](#calibmeth)) for calibrating the nitrate sensor by following these instructions :
+- Click on **Tools** just below **Upload** on the vertical panel on the left of **<span style="color:gold">Galaxy action list</span>** vertical panel on the left (see `a` in the @figure-calib). A new vertical panel appears.  
+- Search `Biogeochemical calibration` in the **<span style="color:gold">top search bar</span>** (@figure-calib)
+- Select the tool. Its **<span style="color:gold">parametrization page</span>** appears on the center (@figure-calib)
+- In **Tool Parameters** section, select for each input (see `b` in the @figure-calib): 
+    - *Input  harmonized netcdf data*: Select the 4903881 harmonized NetCDF file(s) with QC report, named ###_harm_qced.nc. The selection is easier by clicking on the 3 dots {*Browse or Upload datasets*}
+    - *Input reference data* : (optional) Select *woa_###_harm*.nc if you want to estimate the reference nitrate from climatology ([see for getting it](#harmonize-your-data))
+
+:::{note}
+It is possible to add several platform in the *Input harmonized netcdf data*
+:::
+
+- (optional) Change the [default QC flag configuration](#defaultqc) (see `d` in the @figure-calib), if : 
+    - you work with platforms that do not follow the argo flag scale convention
+    - you want to fix adjusted value at QC flag 2 (potentially good) 
+
+- (optional) Change the [default calibration method parametrization](#defaultcalib) or add new parametrizations for comparison. For that, at the question **Select if you want to write your own configuration file or not** (see `e` in the @figure-calib) , answer **Yes, I want to write my own configuration file**.
+    - Change the first configuration if needed
+    - Click on the **Insert Configurations** button to add new parametrization as many time as needed
+
+:::{admonition} 3 examples of parametrization
+:class: dropdown
+- for reproducing the default one change the following item **Enter multiple linear regression** by **Single linear regression**
+- for adding a new method fully automatics with canyon B - don’t change default item value
+- for adding a new method using your own choices, changes each item by your selection : 
+    - Bypass : The user defines P and chooses P below ; Enter 1000 (dbar) just below
+    - Enter multiple linear regression : N corresponds to the number of breakpoints.
+    - reference method :  Climatology / WOA / annual (be sure you have added WOA harmonized climatology in **Tool parameters/input reference data** section)
+
+Now more than one calibration method parametrization are ready to be tested.
+:::
+
+```{figure}  ../../embedded-ressources/figures/S142-calibration.png
+:label: figure-calib
+:width: 900px
+:align: center
+Biogeochemical calibration tool parametrization on Galaxy
+
+```
+
+
+- (optional for argo floats) The tool gives the possibility to fill directly original argo nc files with DM information (coefficient, equation, comment, dm operator …) using DM filler tools from C. Schmechtig. For that, in the section **Do you want to use DMfiller option**  (see `f` in the @figure-calib), change to *Yes, I want to use it*. Then, fill sections : 
+    - *Input original raw netcdf data* with the *dataset collection* 4903881 built at the beginning of the work (Manage your data). This collection includes indeed all original argo nc files useful for reporting DM information
+    - *Input csv files* with the csv created by `odv history manager` tool.
+
+for the next sections, report all information that are mandatories regarding the 
+- institution managing your ago data set
+- BGC contact point 
+- BGC DM operator for this action
+
+:::{important}
+If one of the last pieces of information are missing or not compatible with the information already available in the nc files (as contact point), the tool does not add DM information in the original files.
+:::
+
+- Click on **Run**
+
+At the end of the process, the [tool outputs](#calibmeth) are distributed by Galaxy in 3 collections: 
+- One for NetCDF files, called ***BGC calibration netcdf collection*** 
+- One for figures files, called ***BGC calibration figure collection***
+- One for log files, called ***BGC calibration log files***
+
+If your are a DM Argo operator and activate DM filler option, [DM filler outputs](#dmfiller) are also distributed in a 4{sup}`rd` galaxy collection called ***BGC calibration tar.gz collection*** 
+
+All of these are now available (green color) in the **<span style="color:gold">History</span>** section (@figure-calib) and ready for comparison and validation **but before**, 
+
+- Check the tool logs (***YYYY-MM-DDTHHMM_galaxy_odv-calibration-methods_nitrate_c***) to be sure that everythink is ajdusted and reported in the ARGO BD files (if DMfiller is activated) by clicking on the “eye” icon on the right of the file. If you encounter issues, make sure you respect all the instruction. If you still don’t find why it does not work, send an email to the [contact point](#contact).
+
 
 ### Validate your data

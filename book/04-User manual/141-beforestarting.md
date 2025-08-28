@@ -89,12 +89,65 @@ Its `outputs` are :
 ::::
 
 ### Biogeochemical calibration tool
-Currently, the `Biogegeochemical calibration` tool is operational for **nitrate** and using [Method 1](#Nitrate1).
+Currently, the `Biogegeochemical calibration` tool is operational for **nitrate** and using [Method 1](#Nitrate1) and report DMQC information for the Argo floats. Read below for details
 
-:::{important}
-Because oxygen concentration is implied in the estimation of the `nitrate adjustment from neural network method`, platforms to be calibrated need to have `oxygen with a good quality` that means adjusted in real time or delayed mode for Argo float or glider.
+::::{admonition} Biogegeochemical calibration details
+:label: calibmeth
+This tool calibrate :
+- [nitrate](#nitratepage) using [Method 1](#Nitrate1), with by default
+    - an automatic evaluation of the reference pressure 
+    - canyonB as method for assess the reference value of nitrate
+    - a linear regression for evaluating the correction
+    - the [Argo QC flag convention](https://archimer.ifremer.fr/doc/00228/33951/32470.pdf)
+
+:::{admonition} Default method parametrization
+:label: defaultcalib
+:class: dropdown
+```{figure}  ../../embedded-ressources/figures/S142-calibParam.png
+:label: figure-calpam
+:width: 900px
+:align: center
+Default parametrization of the `Biogegeochemical calibration` tool for nitrate
+```
 :::
 
-:::{note} for Argo floats
+:::{admonition} Default QC flag parametrisation
+:label: defaultqc
+:class: dropdown
+Following ARGO QC flag scale https://archimer.ifremer.fr/doc/00228/33951/32470.pdf - reference table 2)
+- Bad Data QC = 4
+- raw QC value to be replaced = 3
+- QC value of replacement = 1 (for adjusted value)
+:::
+
+Several method parametrizations are also possibles as :
+- a user estimation of the reference pressure
+- canyon-med or WOA as method for assess the reference value of nitrate
+- a multi linear regression for evaluating the *correction* either by a automatic evaluation of the number of break point or a user definition
+
+This tool is able to manage many platforms with many configurations in the same time, useful for comparison. 
+
+Its `outputs` 
+- per platform & per tool parametrization are :
+    - `###_C{parametrization_number}-nitrate.nc` (extended harmonized file with corrected values)
+    - up to 4 diagnostic figures (according to the success): 
+        - `###_C{parametrization_number}-nitrateRaw-Ref_Analysis_ref#01_LinearModel.png`
+        - `###_C{parametrization_number}-nitrateRaw-Ref_Analysis_ref#01_Rsquared.png`
+        - `###_C{parametrization_number}-nitrateZvar_ref_detailed.png`
+        - `###_C{parametrization_number}-nitrateZvar_ref_results.png`
+- for the process
+    - `YYYY-MM-DDTHHMM_galaxy_odv-calibration-methods_nitrate_c.log` : log file summaring status of correction / adjustment
+    - other technical log and state files
+::::
+
+:::{note} DMfiller for Argo floats
+:label:dmfiller
 The calibration tool includes “DMfiller” functionalities to report DMQC (adjustment information and/or QC changes and DM operator information) in the original files and create BD argo files.
+
+The contact point is person in charge of the BGC variables for your DAC
+the DM operators is you
+If one of information is missing or different from those inside the original files (i.e. contact point) then BD files are not delivered.
+
+Its `outputs` are 
+- `###_C{parametrization_number}-nitrate.tar.gz` with all BD files
 :::
