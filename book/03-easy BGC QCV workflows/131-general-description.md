@@ -3,7 +3,13 @@ title: General description
 date: 2025-08-20
 ---
 
-The easy Q.C.V BGC  is composed of standalone, reusable and cloud deployable components that are spread into four thematic layers (Hosting, Social, Data manipulation and User interface layers). The internal architecture, adapted to the case of the Nitrate and Chlorophyll-a processing, is presented in the figure below. It is meant to be deployed within two infrastructures: the Galaxy orchestrator for workflow chained operations and the Testbed cloud infrastructure for the web application itself (in Future). These two deployments are complementary, allowing engaging different kinds of users. The Galaxy deployment is functional, while the testbed deployment requests further funding to be achieved.
+The easy Q.C.V BGC  is composed of standalone, reusable and cloud deployable components that are spread into four thematic layers :
+
+:::{contents}
+:depth: 1
+:::
+
+The internal architecture, adapted to the case of the Nitrate and Chlorophyll-a processing, is presented in @oscar_generalWF. It is meant to be deployed within two infrastructures: the Galaxy orchestrator for workflow chained operations and the Testbed cloud infrastructure for the web application itself (in Future). These two deployments are complementary, allowing engaging different kinds of users. The Galaxy deployment is functional, while the testbed deployment requests further funding to be achieved.
 
 ```{figure}  ../../embedded-ressources/figures/S131_OSCARS_QCV_BGC_2.0_architecture_graph.png
 :label: oscar_generalWF

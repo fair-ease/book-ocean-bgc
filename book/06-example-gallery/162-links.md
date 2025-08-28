@@ -5,15 +5,8 @@ label: links
 ---
 
 
-Rapid links to main features : 
-* FAIR-EASE gitlab
-* Galaxy example workflow
-* web Service
-
-
-
-```{image}  ../../embedded-ressources/figures/sign-2408065_1280.png
-:alt: travaux
-:width: 500px
-:align: center
-```
+Rapid links to main features :
+* @gtuto
+* easy Q.C.V bgc [docker-hub](https://hub.docker.com/u/easyqcvbgc)
+* FAIR-EASE [website](https://fairease.eu/)
+* FAIR-EASE [github](https://github.com/fair-ease/)
