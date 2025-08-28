@@ -16,6 +16,7 @@ For your information, execution time for running tools depends on the number of 
 DO NOT change file names to ensure that any changes you make with ODV will be carried over. However, it is possible to change the name of <span style="color:green">galaxy collections</span> to make them easier to find.
 :::
 
+(my-chapterG1)=
 ### Prerequisites
 
 #### Galaxy
@@ -24,7 +25,7 @@ DO NOT change file names to ensure that any changes you make with ODV will be ca
 Create or Login to your [Galaxy europe account](https://earth-system.usegalaxy.eu/login/start)
 :::
 
-:::{admonition} Galaxy tips and tricks
+:::{hint} Galaxy tips and tricks
 :class: dropdown
 Once you are login, Galaxy is divided into 4 vertical panels whose (@figure-1): 
 - the far left : **<span style="color:gold">Galaxy action list</span>** with “interactive Tools”, “Upload”, “Tools” …
@@ -96,6 +97,7 @@ Because oxygen concentration is implied in the estimation of the `nitrate adjust
 The nitrate calibration needs a potential reference data set such as the nitrate WOA annual climatology. For that, upload the [nitrate WOA annual climatology with NetCDF format](https://www.ncei.noaa.gov/thredds-ocean/catalog/woa23/DATA/nitrate/netcdf/all/1.00/catalog.html?dataset=woa23/DATA/nitrate/netcdf/all/1.00/woa23_all_n00_01.nc) directly from your computer.
 :::
 
+(my-chapterG2)=
 ### Manage your data
 
 #### Step1 : Get your data

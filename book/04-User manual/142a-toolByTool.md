@@ -5,7 +5,7 @@ label: toolbytool
 ---
 
 :::{important} Before starting
-Before running the QCV procedure tool by tool, be sure that your environement ([prerequisite and data management](#galaxyUserManual1)) are ready!
+Before running the QCV procedure tool by tool, be sure that your environement (@my-chapterG1 & @my-chapterG2) are ready!
 :::
 
 ::::{important} Then !
@@ -48,7 +48,10 @@ Run the tool one by one for all platforms and/or reference data set (such as WOA
 :align: center
 Q.C.V harmonizer tool on Galaxy
 ```
+
+(my-chapter2)=
 ### Qualify your data
+(my-section21)=
 #### Step1 : Creation of the ODV collection
 
 Run `ODV collection manager`  ([What is it?](#odvcollmanager)) for creating Ocean Data View (ODV) spreadsheet collection and qualifying the dataset. Please, follow the instructions : 
@@ -91,6 +94,7 @@ Once the [ODV collection manager outputs](#odvcollmanager) are ready, files are 
 ODV collection manager tool on Galaxy
 ```
 
+(my-section22)=
 #### Step 2 : Launch ODV automatically
 
 For launching ODV interactive tool automatically, follow the instructions : 
@@ -154,18 +158,22 @@ Default view when performing called ***qualification_startingPoint_nitrate.xview
 
 :::{error} ODV is open with its home page!!!!
 :class:dropdown
+:label:ehome
 [Read me](#openODV) for opening your collection
 :::
 
 :::{error} ODV is open with map view!!!!
 :class:dropdown
+:label:eview
 [Read me](#loadview) for reload the qualification view
 :::
 
 
+(my-section23)=
 #### Step3 : Qualify the dataset with ODV 
-Many useful information are available in the [Supplementation section for ODV](#my-chapterODV)
+Many useful information are available the @my-chapterODV section
 
+(my-section24)=
 #### Step4 : Export history once qualification is finished.
 :::{warning}
 Be sure that all filters ([how to do?](#filterout))or zoom windows are relaxed ([How to do?](#outzoom)).
@@ -191,6 +199,7 @@ Once the ODV interactive tool closed, the 3 potential odv outputs are now availa
 - The file ***ODV history extracted*** with the history txt files (same as history_from_odv_collection.txt).
 
 
+(my-section25)=
 #### Step5 : (optional) Report QC & Data changes 
 For reporting your QC flags & data changes into the harmonized dataset before calibrating the nitrate sensor, run `ODV history manager` tool ([What is it?](#odvhistmanager)). For that, please : 
 - Click on **Tools** just below **Upload** on the vertical panel **<span style="color:gold">Galaxy action list</span>** on the left (see `a` in the @figure-15). A new vertical panel appears. 
@@ -244,6 +253,7 @@ ODV history manager parametrization
 
 ```
 
+(my-chapter3)=
 ### Calibrate your data
 #### Nitrate
 Run `Biogeochemical calibration` ([What is it?](#calibmeth)) for calibrating the nitrate sensor by following these instructions :
@@ -313,5 +323,34 @@ All of these are now available (green color) in the **<span style="color:gold">H
 
 - Check the tool logs (***YYYY-MM-DDTHHMM_galaxy_odv-calibration-methods_nitrate_c***) to be sure that everythink is ajdusted and reported in the ARGO BD files (if DMfiller is activated) by clicking on the “eye” icon on the right of the file. If you encounter issues, make sure you respect all the instruction. If you still don’t find why it does not work, send an email to the [contact point](#contact).
 
-
+(my-chapter5)=
 ### Validate your data
+We suggest to compare your adjustement with ODV for validating one of the parametrization tested. For that,
+- Repeat **Step1** of @my-chapter2 and create the ODV collection including all NetCDF creating during the **Calibrate your data** phase.
+:::::{tab-set}
+::::{tab-item} no external data
+- Repeat **Step2**  of @my-chapter2 without adding view
+- ODV will open with the new collection for validation. See @my-chapterODV if needed
+::::
+
+::::{tab-item} with external data
+- @addExternal into your **<span style="color:gold">History</span>** following @my-chapterG2 section
+- Repeat **Step2**  of @my-chapter2 : 
+    - without automatic load
+    - by selecting *The data you are unsing are NetCDF or tabular text files* at the question ***Select if you are unsing a ODV collection in a zip folder or if you have your own raw data** and add your collection created by step1 + the external collection
+    - without adding view
+- ODV will open with its home page.
+- follow the instructions of @openODV as many time as you have datasets. From the second time, ODV will ask a metadata and variables mapping. Follow instructions and import variables of interest. 
+:::{hint} Advice
+Import the ODV spreadsheet collection creating by `ODV collection manager` at first
+:::
+- ODV is now ready for the comparison. See @my-chapterODV if needed
+::::
+:::::
+
+:::{hint} add external dataset for comparison
+:label:addExternal
+**Prerequisite** : dataset is a ODV spreadsheet (.txt) or ODV collection (.odv) or NetCDF understanding by ODV
+
+**Dataset of Example** : [webODV Glodap dataset](https://explore.webodv.awi.de/ocean/hydrography/glodap/). See @webODVexport for getting it.
+:::

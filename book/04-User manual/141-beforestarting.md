@@ -142,7 +142,7 @@ Its `outputs`
 
 :::{note} DMfiller for Argo floats
 :label:dmfiller
-The calibration tool includes “DMfiller” functionalities to report DMQC (adjustment information and/or QC changes and DM operator information) in the original files and create BD argo files.
+The calibration tool includes “DMfiller” functionalities to report DMQC (adjustment information and/or QC changes and DM operator information) in the original files and create BD argo files, ready for passing the Argo Checker.
 
 The contact point is person in charge of the BGC variables for your DAC
 the DM operators is you

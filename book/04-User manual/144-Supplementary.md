@@ -95,6 +95,15 @@ if the view has not properly launched, you can load it from the ODV menu. On the
 The figure xx view should appear now.
 :::
 
+#### webODV explore
+[webODV explore](https://explore.webodv.awi.de/) includes several data set ready for visualisation or export for comparison.
+
+:::{admonition} Export webODV explore dataset
+:label: webODVexport
+- Open the dataset
+- Export all the collection or just a zoom from Web odv explorer by clicking on **Export** > **Data** > **ODV Spreadsheet file** (top right panel)
+- Follow the instructions for saving on your computer
+:::
 
 ### Supplemental analyses using Galaxy
 
