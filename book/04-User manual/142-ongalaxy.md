@@ -12,6 +12,10 @@ The next sections explain how to qualify and calibrate the nitrate sensor mounte
 
 For your information, execution time for running tools depends on the number of files, their size and/or the number of people working on Galaxy.
 
+:::{hint} tips and tricks
+A webinar using the float 4903881 as example is also available on [youtube](https://youtu.be/zAg-Ml4Pn-Y)
+::: 
+
 :::{warning}
 DO NOT change file names to ensure that any changes you make with ODV will be carried over. However, it is possible to change the name of <span style="color:green">galaxy collections</span> to make them easier to find.
 :::
