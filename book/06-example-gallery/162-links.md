@@ -1,6 +1,6 @@
 ---
 title: Rapid links to main features
-date: 2025-08-20
+date: 2025-10-01
 label: links
 ---
 
