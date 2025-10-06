@@ -1,6 +1,6 @@
 ---
 title: How to run Easy Q.C.V BGC on Galaxy
-date : 2025-08-25
+date : 2025-10-01
 label: galaxyUserManual1
 ---
 
